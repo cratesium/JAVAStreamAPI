@@ -16,6 +16,12 @@ public class filter {
         System.out.println("new List : -");
         System.out.println(newList);
 
+
+       List<Integer> evenList=  list.stream().filter(i->i%2==0).toList();
+       System.out.println("even list is "+evenList);
+
+    
+
         //filter is used just to filter from current stream not transform the stream 
 
 
