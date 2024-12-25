@@ -41,19 +41,23 @@ public class customSorting {
          }).toList();
          System.out.println(revList);
 
-         Comparator<String> c = (a,b)-> {
-             int la = a.length();
-             int lb = b.length();
-             if(la>lb) return 1;
-             else if(lb>la) return -1;
-             else return 0;
+         Comparator<String> c = (a,b)->{
+            //  int la = a.length();
+            //  int lb = b.length();
+            //  if(la>lb) return 1;
+            //  else if(lb>la) return -1;
+            //  else return 0;
+
+          return  Integer.compare(a.length(), b.length());
          };
 
          List<String> revListMain= strings.stream().sorted(c).toList();
          System.out.println(revListMain);
 
      
-    
+         List<String> DirevListMain= strings.stream().sorted((a,b)->Integer.compare(a.length(), b.length())).toList();
+         System.out.println(DirevListMain);
+
         
     
     
