@@ -17,13 +17,9 @@ public class filterAndMap {
          
                   System.out.println("pass "+passedStudents);
                   System.out.println("failed"+failedStudents);
+                   // adding 5 as grace to failed students 
          
-         
-         
-         
-                  // adding 5 as grace to failed students 
-         
-                  List<Integer> graceMarks = marks.stream() .filter(i->i<30)//first filter all who failed 
+                   List<Integer> graceMarks = marks.stream() .filter(i->i<30)//first filter all who failed 
                   .map(i->i+5) //add 5 grace to failed 
                   .toList(); //return in new list 
 
