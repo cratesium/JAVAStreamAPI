@@ -22,7 +22,27 @@ public class customSorting {
         List<Integer>rIntegers=list.stream().sorted(Comparator.reverseOrder()).toList();
 
          System.out.println(rIntegers);
+
+
+
+         //example 
+         System.out.println("example ");
+         //AA BB CCC A , B, CCC
+         List<String> strings = Arrays.asList("A","BB","B","CCC","D","DD","AAAAAA");
+         List<String> main=strings.stream().sorted().toList(); //will sort lexicographically  [A, AAAAAA, B, BB, CCC, D, DD]
+         System.out.println(main);
+
+         //sort based on the length of the string 
+
+         List<String> revList = strings.stream().sorted(new Comparator<String>() {
+        public int compare( String a , String b){
+            return Integer.compareUnsigned(a.length(), b.length());
+        }
+         }).toList();
+         System.out.println(revList);
+     
     
+        
     
     
     
